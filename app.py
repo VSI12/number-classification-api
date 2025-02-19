@@ -51,5 +51,6 @@ def classify_number():
         "fun_fact": fun_fact
     })
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Get the assigned port from Render
+    app.run(host="0.0.0.0", port=port)
